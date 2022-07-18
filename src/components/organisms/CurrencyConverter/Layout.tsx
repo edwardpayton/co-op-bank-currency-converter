@@ -8,7 +8,7 @@ import { Country } from '@/hooks/countries/types';
 
 export interface Props {
   amount: string;
-  items: Country[];
+  items: Country[] | undefined;
   rateTo: string;
   currencyFrom: string;
   currencyTo: string;
@@ -54,7 +54,7 @@ export default function Layout({
             </div>
             <div className="coop-l-grid__item">
               <ComboBox
-                options={items}
+                options={items!}
                 name="from"
                 label="Convert from"
                 ariaLabel="enter country to convert from"
@@ -63,7 +63,7 @@ export default function Layout({
             </div>
             <div className="coop-l-grid__item">
               <ComboBox
-                options={items}
+                options={items!}
                 name="to"
                 label="Convert to"
                 ariaLabel="enter country to convert to"
