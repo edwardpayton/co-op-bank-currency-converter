@@ -1,0 +1,77 @@
+
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  padding-right: 4rem;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+}
+.arrowIcon:after {
+  position: absolute;
+  content: "";
+  border: solid #6e6e6e;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: .5rem;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+}
+.combobox.active > .arrowButton:after {
+  transform: rotate(-135deg);
+}
+
+.listOptions {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 400px;
+  padding: 5px;
+  margin-top: 2px;
+  background: #fff;
+  border: 2px solid #6e6e6e;
+  border-radius: 8px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.optionButton,
+.optionMissing {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: black;
+  text-align: left;
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+.optionButton:hover,
+.optionButton:active {
+  background: #0f8482;
+  color: #fff;
+}
+
+.optionMissing {
+  cursor: default;
+}
+
+.optionButtonValue {
+  font-size: 1rem;
+}
